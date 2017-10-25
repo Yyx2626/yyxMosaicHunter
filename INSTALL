@@ -4,7 +4,7 @@
 {yyxMosaicHunter} is an R package.
 It can be installed in R environment
 
-First, {pryr} package is pre-required
+First, {pryr} package is prerequisite
 > install.packages('pryr')
 
 Then, you can install {yyxMosaicHunter} from local disk
