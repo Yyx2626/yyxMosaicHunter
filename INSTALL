@@ -1,0 +1,120 @@
+
+== INSTALL ==
+
+{yyxMosaicHunter} is an R package.
+It can be installed in R environment
+
+First, {pryr} package is pre-required
+> install.packages('pryr')
+
+Then, you can install {yyxMosaicHunter} from local disk
+> install.packages("yyxMosaicHunter_0.1.4.tar.gz", repos=NULL)
+(Notice: use yyxMosaicHunter_0.1.4.tar.gz on Linux platform,
+      or use yyxMosaicHunter_0.1.4.zip  on Windows platform)
+
+If it is successfully installed, you can load {yyxMosaicHunter} by
+> library(yyxMosaicHunter)
+
+
+
+== HELP Documentation ==
+
+{yyxMosaicHunter} package contains many functions, which can be shown by
+> help(package="yyxMosaicHunter")
+
+char_to_ascii           Get ASCII code of a char
+yyxMosaicHunter-package
+                        Numerically compute the AF posterior
+                        distribution.
+yyx_NA2FALSE            Convert NA to FALSE
+yyx_baseQ_string_to_phred_vec
+                        Convert phred baseQ string to the phred baseQ
+                        vector
+yyx_calculate_normalization_factor
+                        Compute the normalization factor (integral
+                        area)
+yyx_convert_NA          Convert NA to default value
+yyx_convert_NA_vec      Convert NA to default values in another vector
+yyx_d_distr             Numerical(empirical) density function value(s)
+yyx_exp_function        Exponentiate the value
+yyx_get_credible_interval
+                        Compute the credible interval on distribution
+                        function
+yyx_get_posterior_p_value
+                        Compute the "posterior" p-value on a
+                        distribution
+yyx_is_within_range     Is each element within the specified range?
+yyx_keep_positive_function
+                        Sweep negative values to be zero
+yyx_likelihood_theta_splinefun
+                        Generate spline fitted function of likelihood
+                        of theta
+yyx_likelihood_theta_splinefun__call_c
+                        Generate spline fitted function of likelihood
+                        of theta
+yyx_log10_sum_exp10     Compute log10_sum_exp10 (ie.
+                        log10(sum(10^(vec))) )
+yyx_log_P_o_given_r_q   Compute log of P(o|r,q)
+yyx_log_P_o_given_theta_q
+                        Compute log of P(o|theta,q)
+yyx_log_P_r_given_theta_depth
+                        Compute log of P(r|theta,depth)
+yyx_log_function        Logarithmize the value
+yyx_log_sum_exp         Compute log_sum_exp (ie. log(sum(exp(vec))) )
+yyx_loglikelihood_theta_splinefun
+                        Generate spline fitted function of
+                        log-likelihood of theta
+yyx_loglikelihood_theta_splinefun__call_c
+                        Generate spline fitted function of
+                        log-likelihood of theta
+yyx_loglikelihood_theta_vec
+                        Numerically compute log-likelihood for each
+                        theta
+yyx_multiply_two_functions
+                        Multiply two functions
+yyx_normalize_distribution_function
+                        Normalize a distribution function
+yyx_p_distr             Numerical(empirical) cumulative distribution
+                        function value(s)
+yyx_posterior_mean      Compute the mean of the (posterior)
+                        distribution
+yyx_q_distr             Numerical(empirical) quantile function value(s)
+yyx_ref_het_alt_mosaic_posterior
+                        Compute the posterior probabilities of 4
+                        genotypes
+yyx_restrict_x_interval_function
+                        Restrict the x (definitional domain)
+yyx_restrict_y_interval_function
+                        Restrict the y (value range)
+yyx_two_distribution_minus
+                        Generate spline fitted function for the minus
+                        random variable
+yyx_wrapped_mosaic_hunter_for_one_site
+                        Compute the likelihood function and posterior
+                        probabilities for one site
+
+
+The documentation and examples for each function can be shown (after loading {yyxMosaicHunter} package) by the question mark and the function name, such as
+> ?yyx_wrapped_mosaic_hunter_for_one_site
+
+Compute the likelihood function and posterior probabilities for one
+site
+
+Description:
+
+     ‘yyx_wrapped_mosaic_hunter_for_one_site’ wraps function
+     ‘yyx_baseQ_string_to_phred_vec’,
+     ‘yyx_likelihood_theta_splinefun__call_c’, and
+     ‘yyx_ref_het_alt_mosaic_posterior’, as a pipeline function for one
+     NGS site
+
+Usage:
+
+     yyx_wrapped_mosaic_hunter_for_one_site(ref_baseQ_str, alt_baseQ_str,
+       input_type = "string", phred_shift = 33, knots = 1000,
+       theta_vec = NULL, ref_het_alt_mosaic_prior = c(1, 1, 1, 1),
+       het_beta_prior_param = NULL, output_log10 = FALSE,
+       integrate_par = list(rel.tol = .Machine$double.eps^0.5),
+       splinefun_par = list())
+
+...
