@@ -94,7 +94,8 @@ yyx_wrapped_mosaic_hunter_for_one_site
                         probabilities for one site
 
 
-The documentation and examples for each function can be shown (after loading {yyxMosaicHunter} package) by the question mark and the function name, such as
+The documentation and examples for each function can be shown (after loading {yyxMosaicHunter} package) 
+  by the question mark and the function name, such as
 > ?yyx_wrapped_mosaic_hunter_for_one_site
 
 Compute the likelihood function and posterior probabilities for one
